@@ -1,5 +1,6 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { theme } from "../db.json";
+import React from 'react';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import db from '../db.json';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -25,15 +26,17 @@ const GlobalStyle = createGlobalStyle`
       display: flex;
       flex-direction: column;
   }
-`
+`;
 
-export default function App({ Component, pageProps }) {
-    return (
-        <>
-            <ThemeProvider theme={theme}>
-                <GlobalStyle />
-                <Component {...pageProps} />
-            </ThemeProvider>
-        </>
-    )
+// eslint-disable-next-line react/prop-types
+export default function App({ Component, ...pageProps }) {
+  return (
+    <>
+      <ThemeProvider theme={db.theme}>
+        <GlobalStyle />
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  );
 }

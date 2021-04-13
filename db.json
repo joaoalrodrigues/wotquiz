@@ -1,17 +1,42 @@
 {
     "bg": "https://wallpaperaccess.com/full/1401476.jpg",
-    "title": "",
-    "description": "",
-    "question": [],
+    "title": "Quiz Wheel of Time",
+    "description": "Um quiz sobre o mundo de Westland",
+    "questions": [
+        {
+            "image": "https://dragonmount.com/uploads/monthly_2021_01/EryqDPqVkAEWriM.thumb.jpg.be5384102dc471bf265a698c67f16f26.jpg",
+            "title": "Qual o nome do vilarejo de onde os protagonistas da série se originam?",
+            "description": "Pergunta fácil enh!",
+            "answer": 1,
+            "alternatives": [
+                "Caemlyn",
+                "Dois Rios",
+                "Baerlon",
+                "Manetheren"
+            ]
+        },
+        {
+            "image": "https://www.michaelwhelan.com/wp-content/uploads/memoryoflight-newwork.jpg",
+            "title": "Como é chamado o sa'angreal conquistado por Rand na pedra de Tear?",
+            "description": "",
+            "answer": 3,
+            "alternatives": [
+                "Vora's",
+                "Choedan Kal",
+                "Excalibur",
+                "Callandor"
+            ]
+        }
+    ],
     "external": [],
     "theme": {
         "colors": {
             "primary": "#b71c1c",
             "secondary": "#212121",
-            "mainBg": "",
+            "mainBg": "#213f4e",
             "contrastText": "#ffffff",
-            "wrong": "",
-            "success": ""
+            "wrong": "#FF5722",
+            "success": "#4CAF50"
         },
         "borderRadius": "4px"
     }
