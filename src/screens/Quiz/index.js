@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { useRouter } from 'next/router';
 import { Lottie } from '@crello/react-lottie';
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
@@ -12,6 +13,7 @@ import BackLinkArrow from '../../components/BackLinkArrow';
 import loadingAnimation from './animations/loading.json';
 
 function ResultWidget({ results }) {
+  const { name } = useRouter().query;
   return (
     <Widget>
       <Widget.Header>
@@ -20,18 +22,12 @@ function ResultWidget({ results }) {
 
       <Widget.Content>
         <p>
+          {`Parabéns ${name},`}
+          <br />
           Você acertou
           {' '}
-          {/* {results.reduce((somatoriaAtual, resultAtual) => {
-            const isAcerto = resultAtual === true;
-            if (isAcerto) {
-              return somatoriaAtual + 1;
-            }
-            return somatoriaAtual;
-          }, 0)} */}
           {results.filter((x) => x).length}
-          {' '}
-          perguntas
+          {` de ${results.length} perguntas.`}
         </p>
         <ul>
           {results.map((result, index) => (
